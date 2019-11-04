@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-img.chili-icon > img {
-  max-height: 30px;
-  max-width: 30px;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 95vh;
@@ -16,10 +11,9 @@ img.chili-icon > img {
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
-  content: "Who ordered some SPICY MEMES!?";
   animation-name: header-shrink;
-  animation-delay: 0.5s;
-  animation-duration: 3s;
+  animation-delay: 0.8s;
+  animation-duration: 2.2s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }
@@ -28,25 +22,79 @@ img.chili-icon > img {
   0% {
     min-height: 95vh;
     flex-direction: column;
-    content: "Who ordered some SPICY MEMES!?";
   }
   90% {
     min-height: 9.5vh;
     flex-direction: row;
-    content: "Spicy Memes";
   }
   95% {
     min-height: 10.5vh;
-    content: "Spicy Memes";
   }
   98% {
     min-height: 9.75vh;
-    content: "Spicy Memes";
   }
   100% {
     min-height: 10vh;
     flex-direction: row;
-    content: "Spicy Memes";
+  }
+}
+
+.App-header::after {
+  content: "Who ordered some SPICY MEMES!?";
+  animation-name: text-change;
+  animation-delay: 0.8s;
+  animation-duration: 2.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes text-change {
+  0% {
+    content: "Who ordered some SPICY MEMES!?";
+    opacity: 1;
+  }
+  88% {
+    opacity: 0;
+    content: "";
+  }
+  91% {
+    content: "Spicy Meme Roulette";
+  }
+  92% {
+    opacity: 1;
+    content: "Spicy Meme Roulette";
+  }
+}
+
+.chili-icon {
+  height: 300px;
+  width: 300px;
+  animation-name: pic-shrink;
+  animation-delay: 0.8s;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes pic-shrink {
+  0% {
+    height: 300px;
+    width: 300px;
+  }
+  90% {
+    height: 100%;
+    width: 9.5vh;
+  }
+  95% {
+    height: 100%;
+    width: 10.5vh;
+  }
+  98% {
+    height: 100%vh;
+    width: 9.75vh;
+  }
+  100% {
+    height: 100%;
+    width: 10vh;
   }
 }
 
@@ -61,7 +109,7 @@ img.chili-icon > img {
 }
 
 .meme-pic > img {
-  width: 100%;
+  height: 100%;
 }
 
 .meme-pic > h2 {
