@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+img.chili-icon > img {
+  max-height: 30px;
+  max-width: 30px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 95vh;
@@ -11,22 +16,55 @@
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
+  content: "Who ordered some SPICY MEMES!?";
+  animation-name: header-shrink;
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes header-shrink {
+  0% {
+    min-height: 95vh;
+    flex-direction: column;
+    content: "Who ordered some SPICY MEMES!?";
+  }
+  90% {
+    min-height: 9.5vh;
+    flex-direction: row;
+    content: "Spicy Memes";
+  }
+  95% {
+    min-height: 10.5vh;
+    content: "Spicy Memes";
+  }
+  98% {
+    min-height: 9.75vh;
+    content: "Spicy Memes";
+  }
+  100% {
+    min-height: 10vh;
+    flex-direction: row;
+    content: "Spicy Memes";
+  }
 }
 
 .App-link {
   color: #09d3ac;
 }
 
-.meme {
+.meme-pic {
   position: relative;
   width: 90vw;
+  margin: 3vw;
 }
 
-.meme > img {
+.meme-pic > img {
   width: 100%;
 }
 
-.meme > h2 {
+.meme-pic > h2 {
   position: absolute;
   width: 80%;
   text-align: center;
@@ -44,10 +82,10 @@
     2px 2px 5px #000;
 }
 
-.meme > .bottom {
+.meme-pic > .bottom {
   bottom: 0;
 }
 
-.meme > .top {
+.meme-pic > .top {
   top: 0;
 }
