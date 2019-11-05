@@ -45,7 +45,7 @@
   animation-delay: 0.8s;
   animation-duration: 2.2s;
   animation-timing-function: linear;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
 }
 
 @keyframes text-change {
@@ -53,14 +53,15 @@
     content: "Who ordered some SPICY MEMES!?";
     opacity: 1;
   }
-  88% {
+  75% {
     opacity: 0;
     content: "";
   }
-  91% {
+  80% {
     content: "Spicy Meme Roulette";
+    opacity: 0.125;
   }
-  92% {
+  100% {
     opacity: 1;
     content: "Spicy Meme Roulette";
   }
