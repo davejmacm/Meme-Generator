@@ -58,8 +58,8 @@ class MemeGenerator extends Component {
           />
           <button>Gen</button>
         </form>
-        <div className="meme-pic">
-          <img src={this.state.randomImg} alt="" />
+        <div className="meme-pic" >
+          <img className="meme-" src={this.state.randomImg} alt="" />
           <h2 className="top">{this.state.topText}</h2>
           <h2 className="bottom">{this.state.bottomText}</h2>
         </div>
