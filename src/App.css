@@ -112,13 +112,13 @@
 .meme-pic {
   position: relative;
   width: 90vw;
-  margin: 5vw;
+  margin: 4vw;
 }
 
 .meme-pic > img {
-  max-width: 90vh;
+  max-width: 90vw;
   height: auto;
-  max-height: 75vh;
+  max-height: 70vh;
 }
 
 .meme-pic > h2 {
@@ -145,4 +145,10 @@
 
 .meme-pic > .top {
   top: 0;
+}
+
+@media (max-width: 700px) {
+  .meme-pic > h2 {
+    font-size: 1em;
+  }
 }
