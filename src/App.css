@@ -5,6 +5,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 95vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,14 +104,20 @@
   color: #09d3ac;
 }
 
+.meme-wall {
+  height: 90vh;
+}
+
 .meme-pic {
   position: relative;
   width: 90vw;
-  margin: 3vw;
+  margin: 5vw;
 }
 
 .meme-pic > img {
-  height: 100%;
+  max-width: 90vh;
+  height: auto;
+  max-height: 75vh;
 }
 
 .meme-pic > h2 {
